@@ -1,5 +1,9 @@
-import { state } from "./state.js";
 import { fetchJSON } from "./api.js";
+
+const state = {
+  charts: {}
+};
+
 
 export async function loadChart({ url, canvasId, labelKey, valueKey, label }) {
   const data = await fetchJSON(url);
