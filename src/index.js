@@ -3,8 +3,7 @@ const axios = require("axios");
 const db = require("./db");
 
 const CONFIG = {
-  API_URL: "https://ws.audioscrobbler.com/2.0/",
-  PAGE_LIMIT: 5,          
+  API_URL: "https://ws.audioscrobbler.com/2.0/",         
   RETRY_DELAY: 3000,       
   REQUEST_DELAY: 1200,     
   PER_PAGE: 200
@@ -60,7 +59,7 @@ async function fetchLastfmPage(page, retries = 3) {
   }
 }
 
-async function sync() {
+async function sync(page_limit) {
   console.log("🚀 Iniciando sincronização com Last.fm...");
   
   let page = 1;
@@ -85,7 +84,7 @@ async function sync() {
          break;
       }
 
-      if (page >= CONFIG.PAGE_LIMIT) break;
+      if (page_limit != 0 && page >= page_limit) break;
 
       page++;
       await sleep(CONFIG.REQUEST_DELAY);
