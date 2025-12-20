@@ -22,7 +22,7 @@ export function initFilters(onChange) {
   const monthSelect = document.getElementById("month");
   const currentYear = new Date().getFullYear();
 
-  yearSelect.innerHTML = `<option value="">Todos os anos</option>`;
+  yearSelect.innerHTML = `<option value="">All</option>`;
   for (let y = currentYear; y >= currentYear - 10; y--) {
     yearSelect.innerHTML += `<option value="${y}">${y}</option>`;
   }
