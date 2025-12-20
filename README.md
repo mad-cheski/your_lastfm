@@ -22,14 +22,20 @@ The project is fully containerized with **Docker**, using an automated entrypoin
 
 ## Configuration
 
-**Clone the repository:**
+### Clone the repository:
   ```bash
   git clone https://github.com/Gomaink/your_lastfm.git
   cd your_lastfm
   ```
-**Setup environment variables:** 
+### Setup environment variables:
 
-Create a environment file
+**Get Your API Keys**
+
+Last.fm: Create an API account [here](https://www.last.fm/api/account/create) to get your API Key.
+
+Spotify: Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard), create an app, and retrieve your Client ID and Client Secret.
+
+### Create a environment file:
 
 In your terminal, run:
 
