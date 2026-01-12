@@ -1,7 +1,8 @@
 import { fetchJSON } from "./api.js";
+import { buildQuery } from "./filters.js";
 
 export async function loadAlbums() {
-  const albums = await fetchJSON("/api/top-albums");
+  const albums = await fetchJSON("/api/top-albums" + buildQuery());
   const grid = document.getElementById("albums-grid");
 
   grid.innerHTML = "";
