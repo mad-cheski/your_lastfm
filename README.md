@@ -33,13 +33,6 @@ The project is fully containerized with **Docker**, using an automated entrypoin
 
 Last.fm: Create an API account [here](https://www.last.fm/api/account/create) to get your API Key.
 
-<<<<<<< HEAD
-=======
-`Explanation:` Your LastFM uses the Spotify API exclusively to obtain artist images.
-
-Spotify: Go to the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard), create an app, and retrieve your Client ID and Client Secret.
-
->>>>>>> 61daf8635b5cf65512c22d7c3a9151ae24681a96
 ### Create a environment file:
 
 In your terminal, run:
