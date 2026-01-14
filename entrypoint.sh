@@ -1,9 +1,9 @@
 #!/bin/sh
+set -e
 
 mkdir -p /app/data
-[ ! -f /app/data/stats.db ] && touch /app/data/stats.db
 
-echo "🔄 Running initial synchronization..."
+echo "🔍 Checking database state..."
 node src/initial-sync.js
 
 echo "🚀 Starting services (API + CRON)..."
