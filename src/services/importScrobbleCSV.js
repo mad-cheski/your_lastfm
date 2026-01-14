@@ -2,10 +2,13 @@ const db = require("../db");
 const fastCsv = require("fast-csv");
 const { Readable } = require("stream");
 
+// Import scrobble from CSV File
+// we receive a buffer and a response object, so we can read the csv file buffer
 function importScrobbleCSV(buffer, res) {
   try {
     const stream = Readable.from(buffer.toString());
 
+    // INSERT OR IGNORE, a quick solution for duplicated entries...
     const insertStmt = db.prepare(`
       INSERT OR IGNORE INTO scrobbles
       (artist, track, album, album_image, played_at)

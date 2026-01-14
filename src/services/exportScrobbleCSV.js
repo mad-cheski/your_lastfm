@@ -1,9 +1,12 @@
 const db = require("../db");
 const fastCsv = require("fast-csv");
 
+// Export scrobble to CSV File
+// we receive a response object, so we can write the csv file to the response
 function exportScrobbleCSV(res) {
-  const csvStream = fastCsv.format({ headers: true });
 
+  // creating csv Stream and 'piping' it to the response object
+  const csvStream = fastCsv.format({ headers: true });
   csvStream.pipe(res);
 
   const stmt = db.prepare(`
