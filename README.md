@@ -24,7 +24,7 @@ The project is fully containerized with **Docker**, using an automated entrypoin
 
 ### Create a `.env` file
 
-```
+```env
 LASTFM_API_KEY=your_lastfm_api_key
 LASTFM_USERNAME=your_lastfm_username
 ```
